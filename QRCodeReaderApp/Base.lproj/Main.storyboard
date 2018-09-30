@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="L95-2P-Z5U">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QRCodeReaderApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="775" y="774"/>
+        </scene>
+        <!--CodeVC-->
+        <scene sceneID="jSd-gG-n6T">
+            <objects>
+                <viewController id="L95-2P-Z5U" customClass="QRCodeVC" customModule="QRCodeReaderApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mFT-km-UZb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan QR Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNj-dt-22c">
+                                <rect key="frame" x="63" y="34" width="249.5" height="68.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="50"/>
+                                <color key="textColor" red="0.59999999999999998" green="0.81960784310000001" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I09-jc-0OA">
+                                <rect key="frame" x="112.5" y="258.5" width="150" height="150"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="scanImage"/>
+                                <connections>
+                                    <segue destination="cgm-8y-Jwf" kind="presentation" id="S1S-4L-mW6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="I09-jc-0OA" firstAttribute="centerX" secondItem="jrQ-6C-HnE" secondAttribute="centerX" id="3O1-5I-wQD"/>
+                            <constraint firstItem="iNj-dt-22c" firstAttribute="top" secondItem="jrQ-6C-HnE" secondAttribute="top" constant="14" id="Fq0-eh-ss8"/>
+                            <constraint firstItem="iNj-dt-22c" firstAttribute="centerX" secondItem="jrQ-6C-HnE" secondAttribute="centerX" id="GIZ-5z-bey"/>
+                            <constraint firstItem="I09-jc-0OA" firstAttribute="centerY" secondItem="mFT-km-UZb" secondAttribute="centerY" id="wHI-Gw-ZNb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jrQ-6C-HnE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8o2-VB-FK3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Code Scanner-->
+        <scene sceneID="QSK-KC-r4q">
+            <objects>
+                <viewController id="cgm-8y-Jwf" customClass="QRCodeScanner" customModule="QRCodeReaderApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RUI-zY-D4N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.80000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8F2-GN-1Du">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wwe-cf-jUt">
+                                        <rect key="frame" x="165.5" y="38" width="44" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jei-0F-nNl">
+                                        <rect key="frame" x="15" y="39" width="18" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="18" id="AnH-uY-d5f"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="18" id="YhX-G7-0TJ"/>
+                                            <constraint firstAttribute="height" constant="18" id="kFv-CQ-IqQ"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="cancel"/>
+                                        <connections>
+                                            <segue destination="SpD-Wv-IDA" kind="unwind" unwindAction="dismissVCWithSegue:" id="1YL-7c-4ed"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Jei-0F-nNl" firstAttribute="leading" secondItem="8F2-GN-1Du" secondAttribute="leading" constant="15" id="4Kp-Wc-MSY"/>
+                                    <constraint firstItem="Wwe-cf-jUt" firstAttribute="centerX" secondItem="8F2-GN-1Du" secondAttribute="centerX" id="DDx-gs-gEb"/>
+                                    <constraint firstAttribute="bottom" secondItem="Wwe-cf-jUt" secondAttribute="bottom" constant="8" id="G3U-Ha-8NV"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jei-0F-nNl" secondAttribute="bottom" constant="13" id="IMe-w0-28K"/>
+                                    <constraint firstAttribute="height" constant="70" id="gI4-wl-raM"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No QR code is detected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7d-40-6hZ">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="g4c-kf-7PG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vo6-wd-RhT" firstAttribute="trailing" secondItem="c7d-40-6hZ" secondAttribute="trailing" id="20n-yG-vNm"/>
+                            <constraint firstItem="8F2-GN-1Du" firstAttribute="leading" secondItem="RUI-zY-D4N" secondAttribute="leading" id="J6k-1W-JIl"/>
+                            <constraint firstItem="8F2-GN-1Du" firstAttribute="top" secondItem="RUI-zY-D4N" secondAttribute="top" id="NtH-8y-CgB"/>
+                            <constraint firstItem="c7d-40-6hZ" firstAttribute="leading" secondItem="Vo6-wd-RhT" secondAttribute="leading" id="Qxz-OU-CeY"/>
+                            <constraint firstItem="Vo6-wd-RhT" firstAttribute="trailing" secondItem="8F2-GN-1Du" secondAttribute="trailing" id="vHF-IZ-UB9"/>
+                            <constraint firstItem="Vo6-wd-RhT" firstAttribute="bottom" secondItem="c7d-40-6hZ" secondAttribute="bottom" id="wR4-Vc-Vte"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vo6-wd-RhT"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="c7d-40-6hZ" id="gtQ-Wu-Ehw"/>
+                        <outlet property="topbar" destination="8F2-GN-1Du" id="kVA-Cw-kRj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SRn-fe-XaY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="SpD-Wv-IDA" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1729" y="32"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cancel" width="40" height="40"/>
+        <image name="scanImage" width="150" height="150"/>
+    </resources>
+</document>
